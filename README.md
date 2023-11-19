@@ -3,7 +3,6 @@
 ## Diziler
 
 ### Amaç
-
 - Verileri depolamak ve erişmek için dizileri kullanmak
 - Dizi özelliklerini ve dizi yöntemlerini kullanmak
 
@@ -18,7 +17,6 @@ Bugünkü derste, lezzet dizisinin uzunluğunun 25'i asla geçmemesini sağlarke
 ### Görev 1: Proje Kurulumu
 
 VSCode ve Komut Satırını Kullanma:
-
 1. Bu repo'yu fork'la.
 2. Fork'ladığın repo'yu bilgisayarında clone'la.
 3. Bu projede `main` branch'ine push'layacaksın. LÜTFEN BRANCH OLUŞTURMA!
@@ -35,32 +33,6 @@ VSCode ve Komut Satırını Kullanma:
 `index.js` dosyasını bul ve fonskiyondan geri gelen değerin(`return`) beklenen gibi görünene kadar görevleri tamamlamaya çalış.
 
 `.forEach()`, `.map()`, `.filter()` ve `.reduce()` metodlarını kullanmak şimdilik _yasak_. Bu proje özelinde bunların hiçbirini **kullanma!**
-
-### Test Etme & Debug
-
-Projen klasöründeyken, VS Code'da "split terminal"i tıklayarak ikinci bir terminal ekranı aç.
-
-![alt text](assets/split_terminal.png "Split Terminal")
-
-Sonra `npm run test` yazın ve çalıştırın
-
-![alt text](assets/npm_run_test.png "npm run test")
-
-Açılan ikinci terminalde `npm start` yazıp çalıştırın.
-
-![alt text](assets/npm_start.png "npm start")
-
-Split terminal ile ekranında testleri çalıştırırken bir diğerinde ise debug yapabileceksin. Kodlarında güncelleme yaptıkça ilerlemeyi kontrol için `console.log`'u kullanabilirsin.
-
-![alt text](assets/debug_terminal.png "Terminal buna benzemeli")
-
-### Görev 3: Bonus Çalışma
-
-Sana verilen gün sonu projesindeki görevleri tamamladıktan, yine `index.js` sonundaki bonus çalışmaları yapmanı tavsiye ederiz.
-
-## Proje Teslim Etme Adımları
-
-Verilen görevi tamamladıktan sonra [Workintech Platformu](https://app.workintech.com.tr)'nda (app.workintech.com.tr) `Sprint 1>Gün 3`'ün sonuna eklenmiş olan "` Görev: Sprint 1'in 3. Gün projesini buraya yükle`" içeriğini açıp. GitHub hesabınızda oluşturduğunuz repo'nun adresini buraya ekleyiniz. Eğitmenlerimiz, gün projenizi kontrol edecek ve ertesi gün size slack üzerinden geribildirimde bulunacaklar.
 
 ## Kaynaklar
 
