@@ -1,6 +1,4 @@
-## JavaScript'e giriş
-
-## Diziler
+## JavaScript Diziler
 
 ### Amaç
 - Verileri depolamak ve erişmek için dizileri kullanmak
