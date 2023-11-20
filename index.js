@@ -39,12 +39,10 @@ Aşağıdakileri yapmak için aşağıdaki kopyalama işlevini kullanın:
    2. Alınan dizinin bir kopyasını döndür
 */
 
-
+let copyOriginFlavors = [kopyala(orijinalTatlar)];
 function kopyala(dizi) {
   return dizi.slice(); // Dizinin bir kopyasını döndür
 }
-
-
 /* Görev 2:
 Bir dizinin tam olarak 25 çeşit olduğunu onaylayın. İşleviniz şunları kabul etmelidir:
    1. parametre olarak bir dizi
@@ -55,9 +53,15 @@ Bir dizinin tam olarak 25 çeşit olduğunu onaylayın. İşleviniz şunları ka
 Örneğin: dizi25Cesit(orijinalTatlar) kodunuz düzgün çalışıyorsa true değerini döndürür.
 */
 
+dizi25Cesitmi(copyOriginFlavors);
+function dizi25Cesitmi(dizi) {
+  if (dizi.length ==25) {
+    return true;
 
-function dizi25Cesitmi(/*kod buraya*/){
-  /*kod buraya*/
+  } else {
+    return true;
+  }
+
 }
 
 
@@ -74,10 +78,11 @@ Aşağıdakileri yapmak için cesitEkle işlevini kullanın:
 */
 
 
-function cesitEkle(/*kod buraya*/){
-  /*kod buraya*/
+function cesitEkle(tatlar,string) {
+   tatlar.unshift(string);
+   return tatlar;
 }
-
+cesitEkle(copyOriginFlavors,"Kakule");
 
 /* Cörev 4:
 
@@ -92,7 +97,7 @@ Aşağıdakileri yapmak için sonCesitiKaldir işlevini kullanın:
 */
 
 
-function sonCesitiKaldir(/*kod buraya*/){
+function sonCesitiKaldir(/*kod buraya*/) {
   /*kod buraya*/
 }
 
@@ -108,7 +113,7 @@ Aşağıdakileri yapmak için aşağıdaki indekstekiCesitiGetir işlevini kulla
    Örneğin: indekstekiCesitiGetir(orijinalTatlar, 2) çalıştırılmasıyla, Kakule'in başarıyla eklendiği varsayarsak sonuç "Ceviz" olucaktır.
 */
 
-function indekstekiCesitiGetir(/*kod buraya*/){
+function indekstekiCesitiGetir(/*kod buraya*/) {
   /*kod buraya*/
 }
 
@@ -128,7 +133,7 @@ Aşağıdakileri yapmak için ismeGoreCesitCikar işlevini kullanın:
   İPUCU: Bunun için .splice() kullanabilirsiniz.
 */
 
-function ismeGoreCesitCikar(/*kod buraya*/){
+function ismeGoreCesitCikar(/*kod buraya*/) {
   /*kod buraya*/
 }
 
@@ -154,7 +159,7 @@ Aşağıdakileri yapmak için ismeGoreFiltrele işlevini kullanın:
 */
 
 
-function ismeGoreFiltrele(/*kod buraya*/){
+function ismeGoreFiltrele(/*kod buraya*/) {
   /*kod buraya*/
 }
 
@@ -172,7 +177,7 @@ Aşağıdakileri yapmak için ortalamaKelimeSayisi işlevini kullanın:
    Örneğin: ortalamaKelimeSayisi(orijinalTatlar) 0 ile 2 arasında bir sayı döndürmelidir.
 */
 
-function ortalamaKelimeSayisi(/*kod buraya*/){
+function ortalamaKelimeSayisi(/*kod buraya*/) {
   /*kod buraya*/
 }
 
@@ -190,7 +195,7 @@ Aşağıdakileri yapmak için rastgeleTatlar işlevini ve yeni dizileri kullanı
 */
 
 
-function rastgeleTatlar(/*kod buraya*/){
+function rastgeleTatlar(/*kod buraya*/) {
   /*kod buraya*/
 }
 
@@ -234,7 +239,7 @@ function rastgeleTatlar(/*kod buraya*/){
 
 
 /* Lütfen bu satırın altındaki hiçbir şeyi değiştirmeyin */
-function sa(){
+function sa() {
   console.log('Calışıyor');
   return 'as';
 }
