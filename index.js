@@ -97,10 +97,11 @@ Aşağıdakileri yapmak için sonCesitiKaldir işlevini kullanın:
 */
 
 
-function sonCesitiKaldir(/*kod buraya*/) {
-  /*kod buraya*/
+function sonCesitiKaldir(dizi) {
+    dizi.pop();
+  return dizi;
 }
-
+sonCesitiKaldir(copyOriginFlavors)
 
 /* Görev 5:
 Dizideki belirli bir indeksteki çeşniyi döndüren bir işlev yazın.
@@ -113,11 +114,11 @@ Aşağıdakileri yapmak için aşağıdaki indekstekiCesitiGetir işlevini kulla
    Örneğin: indekstekiCesitiGetir(orijinalTatlar, 2) çalıştırılmasıyla, Kakule'in başarıyla eklendiği varsayarsak sonuç "Ceviz" olucaktır.
 */
 
-function indekstekiCesitiGetir(/*kod buraya*/) {
-  /*kod buraya*/
+function indekstekiCesitiGetir(tatlar,num) {
+    let cesit=tatlar.at(num);
+   return cesit;
 }
-
-
+indekstekiCesitiGetir(copyOriginFlavors,3)
 /* Görev 6:
 
 Firma, ürün yelpazesine daha fazla lezzet eklemek istediğinden, sadece ilk veya son aromayı keyfi olarak çıkarmak yerine, aroma adına göre aromaları kaldırmaları gerektiğini fark ederler. Göreviniz, verilen bir dizinde, ada göre bu tadı diziden çıkarmak.
