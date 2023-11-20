@@ -134,10 +134,12 @@ Aşağıdakileri yapmak için ismeGoreCesitCikar işlevini kullanın:
   İPUCU: Bunun için .splice() kullanabilirsiniz.
 */
 
-function ismeGoreCesitCikar(/*kod buraya*/) {
-  /*kod buraya*/
+function ismeGoreCesitCikar(dizi,string) {
+  var index = dizi.indexOf(string);
+   dizi.splice(index, 1);
+  return dizi;
 }
-
+ismeGoreCesitCikar(orijinalTatlar,"Kestane")
 
 /* Görev 7:
 
@@ -159,11 +161,23 @@ Aşağıdakileri yapmak için ismeGoreFiltrele işlevini kullanın:
   Bu sorunu çözmek için GELİŞMİŞ DİZİ YÖNTEMLERİNİ (yani .filter) KULLANMAYIN.
 */
 
+function ismeGoreFiltrele(tatlarDizisi, filtreDegeri) {
+  var kopyaDizi = tatlarDizisi.slice();
 
-function ismeGoreFiltrele(/*kod buraya*/) {
-  /*kod buraya*/
+  var i = 0;
+  var filteredArray = []; 
+
+  while (i < kopyaDizi.length) {
+    if (kopyaDizi[i].includes(filtreDegeri)) {
+      filteredArray.push(kopyaDizi.splice(i, 1)[0]); 
+    } else {
+      i++;
+    }
+  }
+
+  return filteredArray; // if bloğu dışına taşıyın
 }
-
+var filtrelenmisTatlar = ismeGoreFiltrele(copyOriginFlavors, "Çikolata");
 
 
 /* ALIŞTIRMA */
