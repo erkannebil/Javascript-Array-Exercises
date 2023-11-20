@@ -192,9 +192,28 @@ Aşağıdakileri yapmak için ortalamaKelimeSayisi işlevini kullanın:
    Örneğin: ortalamaKelimeSayisi(orijinalTatlar) 0 ile 2 arasında bir sayı döndürmelidir.
 */
 
-function ortalamaKelimeSayisi(/*kod buraya*/) {
-  /*kod buraya*/
+function ortalamaKelimeSayisi(dizi) {
+
+  if (dizi.length === 0) {
+    return 0;
+  }
+
+  let toplamKelime = 0;
+  let toplamOge = dizi.length;
+
+  for (let i = 0; i < dizi.length; i++) {
+    let kelimeSayisi = dizi[i].split(' ').filter(word => word !== '').length;
+    toplamKelime += kelimeSayisi;
+  }
+
+  const ortalama = toplamKelime / toplamOge;
+
+  return ortalama;
 }
+
+const ortalama = ortalamaKelimeSayisi(orijinalTatlar);
+
+
 
 
 /* ALIŞTIRMA 2:
@@ -210,47 +229,105 @@ Aşağıdakileri yapmak için rastgeleTatlar işlevini ve yeni dizileri kullanı
 */
 
 
-function rastgeleTatlar(/*kod buraya*/) {
-  /*kod buraya*/
+function rastgeleTatlar(orijinalTatlarr, yeniTatlar, mevsimlikTatlar, bolgeselTatlar) {
+  // Her bir diziyi rastgele sırala
+  const orijinalTatlarSiralı = orijinalTatlarr.sort(() => Math.random() - 0.5);
+  const yeniTatlarSiralı = yeniTatlar.sort(() => Math.random() - 0.5);
+  const mevsimlikTatlarSiralı = mevsimlikTatlar.sort(() => Math.random() - 0.5);
+  const bolgeselTatlarSiralı = bolgeselTatlar.sort(() => Math.random() - 0.5);
+
+  // Her bir diziden rastgele 5 tat seç
+  const orijinalTatlarSecilen = orijinalTatlarSiralı.slice(0, 5);
+  const yeniTatlarSecilen = yeniTatlarSiralı.slice(0, 5);
+  const mevsimlikTatlarSecilen = mevsimlikTatlarSiralı.slice(0, 5);
+  const bolgeselTatlarSecilen = bolgeselTatlarSiralı.slice(0, 5);
+
+  // Tüm seçilenleri birleştir
+  const tumTatlar = orijinalTatlarSecilen.concat(
+    yeniTatlarSecilen,
+    mevsimlikTatlarSecilen,
+    bolgeselTatlarSecilen
+  );
+
+  return tumTatlar;
 }
 
-// NEW DATA ARRAYS FOR STRETCH 2 ⬇️
-// const yeniTatlar = [
-//   "Badem",
-//   "Ballı Badem",
-//   "Fıstık Ezmesi",
-//   "Profiterol",
-//   "Madlen Çikolata"
-// ]
+// Örnek kullanım:
+const orijinalTatlarr = [
+  "Çikolata",
+  "Fındık Çikolata",
+  "Fıstık Çikolata",
+  "Badem Çikolata",
+  "Vanilya",
+  "Karamel",
+  "Hindistan Cevizi",
+  "Kuru üzüm",
+  "Beyaz Çikolata",
+  "Kek üzerine krema",
+  "Mango",
+  "Pekan",
+  "Kaju",
+  "Çikolatalı Mousse",
+  "Fransız Vanilyası",
+  "Yumurta",
+  "Alman çikolatası",
+  "Kakao",
+  "Karamel macchiato",
+  "Kaymak",
+  "Karpuz",
+  "Karadut",
+  "Turunç",
+  "Portakal",
+  "Yogurt",
+  "Krem Peynir"
+];
 
-// const mevsimlikTatlar = [
-// "Pekan",
-// "Kaju",
-// "Çikolatalı Mousse",
-// "Fransız Vanilyası",
-// "Yumurta",
-// "Alman çikolatası",
-// "Kek üzerine krema",
-// "Hindistan Cevizi",
-// "Kaymaklı Biskuvi",
-// "Beyaz Çikolata",
-// "Mango"
-// ]
+const yeniTatlar = [
+  "Badem",
+  "Ballı Badem",
+  "Fıstık Ezmesi",
+  "Profiterol",
+  "Madlen Çikolata"
+];
 
-// const bolgeselTatlar = [
-// "Kaymak",
-// "Karpuz",
-// "Karadut",
-// "Turunç",
-// "Portakal",
-// "Yogurt",
-// "Krem Peynir",
-// "Kakao",
-// "Karamel macchiato",
-// "Kuru üzüm",
-// "Peynir",
-// "Karamel"
-// ]
+const mevsimlikTatlar = [
+  "Pekan",
+  "Kaju",
+  "Çikolatalı Mousse",
+  "Fransız Vanilyası",
+  "Yumurta",
+  "Alman çikolatası",
+  "Kek üzerine krema",
+  "Hindistan Cevizi",
+  "Kaymaklı Biskuvi",
+  "Beyaz Çikolata",
+  "Mango"
+];
+
+const bolgeselTatlar = [
+  "Kaymak",
+  "Karpuz",
+  "Karadut",
+  "Turunç",
+  "Portakal",
+  "Yogurt",
+  "Krem Peynir",
+  "Kakao",
+  "Karamel macchiato",
+  "Kuru üzüm",
+  "Peynir",
+  "Karamel"
+];
+
+const rastgeleTatlarDizisi = rastgeleTatlar(
+  orijinalTatlar,
+  yeniTatlar,
+  mevsimlikTatlar,
+  bolgeselTatlar
+);
+
+console.log(rastgeleTatlarDizisi);
+
 
 
 /* Lütfen bu satırın altındaki hiçbir şeyi değiştirmeyin */
